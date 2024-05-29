@@ -1,9 +1,9 @@
 const qr = require('qrcode');
 
 // Function to generate QR code with endpoint URL
-async function generateQRCode(content) {
+async function generateQRCode(id) {
   try {
-    const qrImage = await qr.toDataURL(JSON.stringify(content));
+    const qrImage = await qr.toDataURL(id);
 
     return {
       hasError: false,
